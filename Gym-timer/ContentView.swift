@@ -1,21 +1,17 @@
 //
 //  ContentView.swift
-//  Gym-timer
+//  Gym timer
 //
-//  Created by Gary yang on 2026/2/6.
+//  Created by Gary yang on 2026/1/29.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var timerManager = TimerManager.shared
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        TimerView(timerManager: timerManager)
     }
 }
 

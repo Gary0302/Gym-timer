@@ -6,8 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4E87D8932F36D3DC002EA560 /* Gym-timer-watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E87D8942F36D3DC002EA560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E87D8722F36D309002EA560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E87D8912F36D3DC002EA560;
+			remoteInfo = "Gym-timer-watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E87D8A32F36D3DE002EA560 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4E87D8932F36D3DC002EA560 /* Gym-timer-watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4E87D87A2F36D309002EA560 /* Gym-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E87D88D2F36D3DC002EA560 /* Gym-timer-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-timer-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-timer-watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +46,22 @@
 			path = "Gym-timer";
 			sourceTree = "<group>";
 		};
+		4E87D8962F36D3DC002EA560 /* Gym-timer-watch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Gym-timer-watch Watch App";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E87D8772F36D309002EA560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E87D88F2F36D3DC002EA560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				4E87D87C2F36D309002EA560 /* Gym-timer */,
+				4E87D8962F36D3DC002EA560 /* Gym-timer-watch Watch App */,
 				4E87D87B2F36D309002EA560 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				4E87D87A2F36D309002EA560 /* Gym-timer.app */,
+				4E87D88D2F36D3DC002EA560 /* Gym-timer-watch.app */,
+				4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +115,47 @@
 			productReference = 4E87D87A2F36D309002EA560 /* Gym-timer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4E87D88C2F36D3DC002EA560 /* Gym-timer-watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E87D8A42F36D3DE002EA560 /* Build configuration list for PBXNativeTarget "Gym-timer-watch" */;
+			buildPhases = (
+				4E87D88B2F36D3DC002EA560 /* Resources */,
+				4E87D8A32F36D3DE002EA560 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E87D8952F36D3DC002EA560 /* PBXTargetDependency */,
+			);
+			name = "Gym-timer-watch";
+			packageProductDependencies = (
+			);
+			productName = "Gym-timer-watch";
+			productReference = 4E87D88D2F36D3DC002EA560 /* Gym-timer-watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		4E87D8912F36D3DC002EA560 /* Gym-timer-watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E87D8A02F36D3DE002EA560 /* Build configuration list for PBXNativeTarget "Gym-timer-watch Watch App" */;
+			buildPhases = (
+				4E87D88E2F36D3DC002EA560 /* Sources */,
+				4E87D88F2F36D3DC002EA560 /* Frameworks */,
+				4E87D8902F36D3DC002EA560 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4E87D8962F36D3DC002EA560 /* Gym-timer-watch Watch App */,
+			);
+			name = "Gym-timer-watch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Gym-timer-watch Watch App";
+			productReference = 4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -81,6 +167,12 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					4E87D8792F36D309002EA560 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4E87D88C2F36D3DC002EA560 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4E87D8912F36D3DC002EA560 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -100,12 +192,28 @@
 			projectRoot = "";
 			targets = (
 				4E87D8792F36D309002EA560 /* Gym-timer */,
+				4E87D88C2F36D3DC002EA560 /* Gym-timer-watch */,
+				4E87D8912F36D3DC002EA560 /* Gym-timer-watch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E87D8782F36D309002EA560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E87D88B2F36D3DC002EA560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E87D8902F36D3DC002EA560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +230,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4E87D88E2F36D3DC002EA560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E87D8952F36D3DC002EA560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E87D8912F36D3DC002EA560 /* Gym-timer-watch Watch App */;
+			targetProxy = 4E87D8942F36D3DC002EA560 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4E87D8862F36D30B002EA560 /* Debug */ = {
@@ -302,6 +425,94 @@
 			};
 			name = Release;
 		};
+		4E87D8A12F36D3DE002EA560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gym-timer-watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = J99D5LKT2H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4E87D8A22F36D3DE002EA560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gym-timer-watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = J99D5LKT2H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		4E87D8A52F36D3DE002EA560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J99D5LKT2H;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4E87D8A62F36D3DE002EA560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J99D5LKT2H;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +530,24 @@
 			buildConfigurations = (
 				4E87D8892F36D30B002EA560 /* Debug */,
 				4E87D88A2F36D30B002EA560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E87D8A02F36D3DE002EA560 /* Build configuration list for PBXNativeTarget "Gym-timer-watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E87D8A12F36D3DE002EA560 /* Debug */,
+				4E87D8A22F36D3DE002EA560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E87D8A42F36D3DE002EA560 /* Build configuration list for PBXNativeTarget "Gym-timer-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E87D8A52F36D3DE002EA560 /* Debug */,
+				4E87D8A62F36D3DE002EA560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
