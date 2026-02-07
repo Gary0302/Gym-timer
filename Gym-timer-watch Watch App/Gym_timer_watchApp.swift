@@ -1,17 +1,17 @@
 //
 //  Gym_timer_WatchApp.swift
-//  Gym-timer Watch Watch App
+//  Gym timer Watch App
 //
-//  Created by Gary yang on 2026/2/6.
+//  Created by Gary yang on 2026/1/29.
 //
 
 import SwiftUI
 
 @main
-struct Gym_timer_Watch_Watch_AppApp: App {
+struct Gym_timer_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WatchContentView()
         }
     }
 }

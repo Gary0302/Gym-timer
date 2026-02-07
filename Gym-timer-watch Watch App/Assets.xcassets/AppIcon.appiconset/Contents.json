@@ -1,8 +1,23 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "platform" : "watchos",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "idiom" : "watch",
+      "scale" : "2x",
+      "size" : "44x44"
+    },
+    {
+      "idiom" : "watch",
+      "scale" : "2x",
+      "size" : "50x50"
+    },
+    {
+      "idiom" : "watch-marketing",
+      "scale" : "1x",
       "size" : "1024x1024"
     }
   ],
