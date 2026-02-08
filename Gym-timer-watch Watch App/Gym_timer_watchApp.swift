@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct Gym_timer_Watch_AppApp: App {
+    init() {
+        WatchNotificationManager.shared.requestPermission()
+    }
+    
     var body: some Scene {
         WindowGroup {
             WatchContentView()

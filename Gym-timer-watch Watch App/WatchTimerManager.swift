@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 import WatchKit
+import UserNotifications
 
 // MARK: - Timer Phase (Watch)
 enum WatchTimerPhase: String, CaseIterable {
@@ -117,9 +118,17 @@ class WatchTimerManager: ObservableObject {
     private func handleWillResignActive() {
         guard isRunning, !isPaused else { return }
         backgroundDate = Date()
+        // Schedule local notification so user gets alerted when phase ends
+        if remainingSeconds > 0 && currentPhase != .waitingForTap {
+            WatchNotificationManager.shared.schedulePhaseCompleteNotification(
+                in: remainingSeconds,
+                phaseName: currentPhase.displayName
+            )
+        }
     }
     
     private func handleDidBecomeActive() {
+        WatchNotificationManager.shared.cancelPhaseNotification()
         guard let bgDate = backgroundDate, isRunning, !isPaused else { return }
         
         let elapsedInBackground = Int(Date().timeIntervalSince(bgDate))
@@ -130,6 +139,7 @@ class WatchTimerManager: ObservableObject {
     // MARK: - Timer Control
     func start() {
         guard !isRunning else { return }
+        WatchNotificationManager.shared.requestPermission()
         
         isRunning = true
         isPaused = false
@@ -145,6 +155,7 @@ class WatchTimerManager: ObservableObject {
             startTimer()
         }
         
+        WatchWorkoutManager.shared.startWorkoutSession()
         playHaptic(.start)
     }
     
@@ -170,6 +181,8 @@ class WatchTimerManager: ObservableObject {
     }
     
     func stop() {
+        WatchWorkoutManager.shared.endWorkoutSession()
+        WatchNotificationManager.shared.cancelPhaseNotification()
         isRunning = false
         isPaused = false
         timer?.invalidate()

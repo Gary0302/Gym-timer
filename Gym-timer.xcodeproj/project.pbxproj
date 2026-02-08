@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E87D8932F36D3DC002EA560 /* Gym-timer-watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E87D8B02F36D400002EA560 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E87D8B12F36D400002EA560 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4E87D87A2F36D309002EA560 /* Gym-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E87D88D2F36D3DC002EA560 /* Gym-timer-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-timer-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-timer-watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E87D8B12F36D400002EA560 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E87D8B02F36D400002EA560 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 				4E87D87C2F36D309002EA560 /* Gym-timer */,
 				4E87D8962F36D3DC002EA560 /* Gym-timer-watch Watch App */,
 				4E87D87B2F36D309002EA560 /* Products */,
+				4E87DA5A2F36DC0C002EA560 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +92,14 @@
 				4E87D8922F36D3DC002EA560 /* Gym-timer-watch Watch App.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4E87DA5A2F36DC0C002EA560 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				4E87D8B12F36D400002EA560 /* HealthKit.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,20 +387,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gym-timer/Preview Content\"";
-				DEVELOPMENT_TEAM = J99D5LKT2H;
+				DEVELOPMENT_TEAM = 98527N34D6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.garyyang.gymtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -404,20 +418,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gym-timer/Preview Content\"";
-				DEVELOPMENT_TEAM = J99D5LKT2H;
+				DEVELOPMENT_TEAM = 98527N34D6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.garyyang.gymtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -433,11 +449,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gym-timer-watch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = J99D5LKT2H;
+				DEVELOPMENT_TEAM = 98527N34D6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Gym Timer uses HealthKit to keep the screen on during your workout.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Gym Timer uses HealthKit to keep the screen on during your workout.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKBackgroundModes = "workout-processing";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,11 +482,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gym-timer-watch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = J99D5LKT2H;
+				DEVELOPMENT_TEAM = 98527N34D6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Gym Timer uses HealthKit to keep the screen on during your workout.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Gym Timer uses HealthKit to keep the screen on during your workout.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKBackgroundModes = "workout-processing";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,10 +512,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J99D5LKT2H;
+				DEVELOPMENT_TEAM = 98527N34D6;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer-watch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.in.Gym-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -504,10 +526,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J99D5LKT2H;
+				DEVELOPMENT_TEAM = 98527N34D6;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gym-timer-watch";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.Gym-timer-watch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garyyang.in.Gym-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

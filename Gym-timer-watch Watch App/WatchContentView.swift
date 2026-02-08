@@ -12,11 +12,8 @@ struct WatchContentView: View {
     
     var body: some View {
         TabView {
-            // Timer View
             WatchTimerView()
                 .environmentObject(timerManager)
-            
-            // Settings View
             WatchSettingsView()
                 .environmentObject(timerManager)
         }
@@ -30,25 +27,15 @@ struct WatchTimerView: View {
     
     var body: some View {
         VStack(spacing: 8) {
-            // Phase indicator
-            HStack(spacing: 4) {
-                Image(systemName: timerManager.currentPhase.systemImage)
-                    .foregroundColor(timerManager.currentPhase.color)
-                Text(timerManager.currentPhase.displayName)
-                    .font(.caption)
-                    .foregroundColor(timerManager.currentPhase.color)
-            }
+            // Set Progress - always show to prevent ring shift
+            Text(timerManager.isRunning ? "\(timerManager.currentSet)/\(timerManager.settings.sets)" : "-/\(timerManager.settings.sets)")
+                .font(.caption2)
+                .foregroundColor(.secondary)
+                .frame(height: 16)
             
-            // Set Progress
-            if timerManager.isRunning {
-                Text("\(timerManager.currentSet)/\(timerManager.settings.sets)")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-            
-            // Timer Display
+            // Timer Display - phase indicator inside ring, bigger ring
             ZStack {
-                // Progress Ring
+                // Progress Ring (bigger to avoid overlap)
                 Circle()
                     .stroke(timerManager.currentPhase.color.opacity(0.3), lineWidth: 8)
                 
@@ -61,26 +48,41 @@ struct WatchTimerView: View {
                     .rotationEffect(.degrees(-90))
                     .animation(.linear(duration: 0.1), value: timerManager.progressPercentage)
                 
-                // Time or Message
-                if timerManager.currentPhase == .waitingForTap {
-                    VStack(spacing: 2) {
-                        Image(systemName: "hand.tap.fill")
-                            .font(.title2)
-                        Text("Tap")
+                // Content inside ring: phase + time/message
+                VStack(spacing: 4) {
+                    // Phase indicator inside ring
+                    HStack(spacing: 2) {
+                        Image(systemName: timerManager.currentPhase.systemImage)
+                            .font(.caption2)
+                        Text(timerManager.currentPhase.displayName)
                             .font(.caption2)
                     }
                     .foregroundColor(timerManager.currentPhase.color)
-                } else {
-                    Text(timerManager.formattedTime)
-                        .font(.system(size: 36, weight: .bold, design: .monospaced))
-                        .minimumScaleFactor(0.5)
+                    
+                    // Time or Message
+                    if timerManager.currentPhase == .waitingForTap {
+                        VStack(spacing: 0) {
+                            Image(systemName: "hand.tap.fill")
+                                .font(.title3)
+                            Text("Tap")
+                                .font(.caption2)
+                        }
+                        .foregroundColor(timerManager.currentPhase.color)
+                    } else {
+                        Text(timerManager.formattedTime)
+                            .font(.system(size: 32, weight: .bold, design: .monospaced))
+                            .minimumScaleFactor(0.5)
+                            .lineLimit(1)
+                            .fixedSize(horizontal: true, vertical: false)
+                    }
                 }
             }
-            .frame(width: 100, height: 100)
+            .frame(width: 130, height: 130)
             
             // Control Buttons
             controlButtons
         }
+        .focusable(false) // Let crown scroll TabView during session instead of capturing on buttons
         .padding(.horizontal, 4)
     }
     
