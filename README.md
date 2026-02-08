@@ -69,6 +69,10 @@ This project is open source. Feel free to use, modify, and distribute.
 
 Issues and pull requests are welcome at [https://github.com/Gary0302/Gym-timer](https://github.com/Gary0302/Gym-timer).
 
+## Support
+
+If you find this app helpful, consider [buying me a coffee](https://buymeacoffee.com/Garyyang)!
+
 ## Contact
 
 - GitHub: [@Gary0302](https://github.com/Gary0302)
