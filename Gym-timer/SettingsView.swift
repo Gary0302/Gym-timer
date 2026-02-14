@@ -28,7 +28,6 @@ struct SettingsView: View {
     
     // URLs
     private let githubURL = URL(string: "https://github.com/Gary0302/Gym-timer")!
-    private let coffeeURL = URL(string: "https://buymeacoffee.com/garyyang")!
     
     // Feedback email URL
     private var feedbackURL: URL {
@@ -69,16 +68,29 @@ struct SettingsView: View {
                 
                 // MARK: - 訓練設定
                 Section {
-                    Stepper(value: $timerManager.settings.sets, in: 1...50) {
-                        HStack {
-                            Label(l10n.sets, systemImage: "repeat")
-                            Spacer()
-                            Text("\(timerManager.settings.sets) \(l10n.setsUnit)")
-                                .foregroundColor(.secondary)
+                    Toggle(isOn: $timerManager.settings.infiniteLoopMode) {
+                        Label(l10n.infiniteLoopMode, systemImage: "infinity")
+                    }
+                    .onChange(of: timerManager.settings.infiniteLoopMode) { _, isOn in
+                        if isOn && timerManager.settings.sets < 1 { timerManager.settings.sets = 1 }
+                    }
+                    
+                    if !timerManager.settings.infiniteLoopMode {
+                        Stepper(value: $timerManager.settings.sets, in: 1...50) {
+                            HStack {
+                                Label(l10n.sets, systemImage: "repeat")
+                                Spacer()
+                                Text("\(timerManager.settings.sets) \(l10n.setsUnit)")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 } header: {
                     Text(l10n.trainingSettings)
+                } footer: {
+                    if timerManager.settings.infiniteLoopMode {
+                        Text(l10n.infiniteLoopModeDescription)
+                    }
                 }
                 
                 // MARK: - 時間設定
@@ -289,29 +301,6 @@ struct SettingsView: View {
                                 Text(l10n.starOnGitHub)
                                     .foregroundColor(.primary)
                                 Text(l10n.openSource)
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-                            
-                            Spacer()
-                            
-                            Image(systemName: "arrow.up.right")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
-                    }
-                    
-                    // Buy Me a Coffee
-                    Link(destination: coffeeURL) {
-                        HStack {
-                            Image(systemName: "cup.and.saucer.fill")
-                                .foregroundColor(.orange)
-                                .frame(width: 28)
-                            
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(l10n.buyMeACoffee)
-                                    .foregroundColor(.primary)
-                                Text(l10n.supportDevelopment)
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                             }

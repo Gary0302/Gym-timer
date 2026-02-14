@@ -152,14 +152,6 @@ struct L10n {
         language == .chinese ? "給這個 App 一個星星吧" : "Give this app a star!"
     }
     
-    var buyMeACoffee: String {
-        language == .chinese ? "請我喝杯咖啡嗎？" : "Buy Me a Coffee?"
-    }
-    
-    var supportDevelopment: String {
-        language == .chinese ? "支持開發者繼續更新" : "Support continued development"
-    }
-    
     var feedback: String {
         language == .chinese ? "意見反饋" : "Feedback"
     }
@@ -268,6 +260,22 @@ struct L10n {
     
     func setProgress(current: Int, total: Int) -> String {
         language == .chinese ? "第 \(current) / \(total) 組" : "Set \(current) / \(total)"
+    }
+    
+    var setProgressInfinite: String {
+        language == .chinese ? "無限循環" : "Infinite"
+    }
+    
+    func setProgressInfinite(current: Int) -> String {
+        language == .chinese ? "第 \(current) 組 · 無限" : "Set \(current) · ∞"
+    }
+    
+    var infiniteLoopMode: String {
+        language == .chinese ? "無限循環模式" : "Infinite Loop"
+    }
+    
+    var infiniteLoopModeDescription: String {
+        language == .chinese ? "不設組數上限，手動停止前持續循環" : "No set limit, loops until you stop"
     }
     
     // Language
